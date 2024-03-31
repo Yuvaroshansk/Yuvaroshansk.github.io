@@ -208,3 +208,84 @@ col-2 img{
     background-color: #45a049; 
     cursor: pointer;
 }
+
+.lesson1 {
+    position: absolute; /* Position the element relative to its containing block */
+    top: 100px; /* Adjust the distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+
+.container-slider{
+    padding-top: 2px;
+    padding-bottom: 90px;
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 60rem;
+    margin: 0 auto;
+
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
+    margin-bottom: 1px;
+
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    justify-content: center; /* Center the dots horizontally */
+    margin-top: 20px; /* Add margin-top to move the dots below the slide */
+}
+
+
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 100;
+}
+
+/* Hide scrollbar */
+.slider {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.slider::-webkit-scrollbar {
+    display: none; /* WebKit (Chrome, Safari, etc.) */
+}
